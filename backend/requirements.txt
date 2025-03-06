@@ -1,10 +1,9 @@
 fastapi==0.95.2
 uvicorn==0.24.0
 python-multipart==0.0.6
-spleeter==2.3.0
-numpy>=1.19.2,<1.24.0
-soundfile==0.12.1
-tensorflow-macos==2.5.0
+demucs==4.0.1
 librosa
 ffmpeg-python==0.2.0
 pydub==0.25.1
+numpy==1.23.5
+torchaudio>=2.0.0

@@ -1,0 +1,266 @@
+2025-03-06 13:45:42,767 - INFO - Starting application with directories:
+2025-03-06 13:45:42,768 - INFO - Upload directory: /Users/alan/code/audio-jam/src/backend/temp/uploads
+2025-03-06 13:45:42,768 - INFO - Output directory: /Users/alan/code/audio-jam/src/backend/temp/separated
+2025-03-06 13:45:43,030 - INFO - Model loaded successfully. Using device: cpu
+2025-03-06 13:45:59,187 - DEBUG - Calling on_part_begin with no data
+2025-03-06 13:45:59,188 - DEBUG - Calling on_header_field with data[42:61]
+2025-03-06 13:45:59,188 - DEBUG - Calling on_header_value with data[63:107]
+2025-03-06 13:45:59,188 - DEBUG - Calling on_header_end with no data
+2025-03-06 13:45:59,188 - DEBUG - Calling on_header_field with data[109:121]
+2025-03-06 13:45:59,188 - DEBUG - Calling on_header_value with data[123:133]
+2025-03-06 13:45:59,188 - DEBUG - Calling on_header_end with no data
+2025-03-06 13:45:59,188 - DEBUG - Calling on_headers_finished with no data
+2025-03-06 13:45:59,189 - DEBUG - Calling on_part_data with data[137:97721]
+2025-03-06 13:45:59,189 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,189 - DEBUG - Calling on_part_data with data[97722:162282]
+2025-03-06 13:45:59,189 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,190 - DEBUG - Calling on_part_data with data[162283:261419]
+2025-03-06 13:45:59,191 - DEBUG - Calling on_part_data with data[0:53363]
+2025-03-06 13:45:59,191 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,191 - DEBUG - Calling on_part_data with data[53364:262144]
+2025-03-06 13:45:59,192 - DEBUG - Calling on_part_data with data[0:30858]
+2025-03-06 13:45:59,192 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,192 - DEBUG - Calling on_part_data with data[30859:34905]
+2025-03-06 13:45:59,192 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,192 - DEBUG - Calling on_part_data with data[34906:79959]
+2025-03-06 13:45:59,192 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,193 - DEBUG - Calling on_part_data with data[79960:171287]
+2025-03-06 13:45:59,193 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,193 - DEBUG - Calling on_part_data with data[171288:262144]
+2025-03-06 13:45:59,193 - DEBUG - Calling on_part_data with data[0:11502]
+2025-03-06 13:45:59,193 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,193 - DEBUG - Calling on_part_data with data[11503:115268]
+2025-03-06 13:45:59,193 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,194 - DEBUG - Calling on_part_data with data[115269:139362]
+2025-03-06 13:45:59,194 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,194 - DEBUG - Calling on_part_data with data[139363:159129]
+2025-03-06 13:45:59,194 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,194 - DEBUG - Calling on_part_data with data[159130:262144]
+2025-03-06 13:45:59,195 - DEBUG - Calling on_part_data with data[0:184795]
+2025-03-06 13:45:59,195 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,195 - DEBUG - Calling on_part_data with data[184796:197227]
+2025-03-06 13:45:59,195 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,195 - DEBUG - Calling on_part_data with data[197228:236625]
+2025-03-06 13:45:59,195 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,195 - DEBUG - Calling on_part_data with data[236626:262144]
+2025-03-06 13:45:59,222 - DEBUG - Calling on_part_data with data[0:36031]
+2025-03-06 13:45:59,222 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,222 - DEBUG - Calling on_part_data with data[36032:41469]
+2025-03-06 13:45:59,222 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,223 - DEBUG - Calling on_part_data with data[41470:138305]
+2025-03-06 13:45:59,223 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,223 - DEBUG - Calling on_part_data with data[138306:186990]
+2025-03-06 13:45:59,223 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,224 - DEBUG - Calling on_part_data with data[186991:232357]
+2025-03-06 13:45:59,224 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,224 - DEBUG - Calling on_part_data with data[232358:254151]
+2025-03-06 13:45:59,224 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,224 - DEBUG - Calling on_part_data with data[254152:262144]
+2025-03-06 13:45:59,227 - DEBUG - Calling on_part_data with data[0:166013]
+2025-03-06 13:45:59,227 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,227 - DEBUG - Calling on_part_data with data[166014:262144]
+2025-03-06 13:45:59,231 - DEBUG - Calling on_part_data with data[0:71609]
+2025-03-06 13:45:59,231 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,231 - DEBUG - Calling on_part_data with data[71610:116132]
+2025-03-06 13:45:59,231 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,231 - DEBUG - Calling on_part_data with data[116133:186943]
+2025-03-06 13:45:59,231 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,232 - DEBUG - Calling on_part_data with data[186944:194184]
+2025-03-06 13:45:59,232 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,232 - DEBUG - Calling on_part_data with data[194185:262144]
+2025-03-06 13:45:59,233 - DEBUG - Calling on_part_data with data[0:14128]
+2025-03-06 13:45:59,233 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[14129:172039]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[172040:189206]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[189207:231679]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[231680:243729]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[243730:254261]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[254262:257214]
+2025-03-06 13:45:59,234 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,235 - DEBUG - Calling on_part_data with data[257215:262144]
+2025-03-06 13:45:59,237 - DEBUG - Calling on_part_data with data[0:20610]
+2025-03-06 13:45:59,237 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,237 - DEBUG - Calling on_part_data with data[20611:39499]
+2025-03-06 13:45:59,237 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,237 - DEBUG - Calling on_part_data with data[39500:51934]
+2025-03-06 13:45:59,237 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,237 - DEBUG - Calling on_part_data with data[51935:129107]
+2025-03-06 13:45:59,237 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,238 - DEBUG - Calling on_part_data with data[129108:262108]
+2025-03-06 13:45:59,238 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,238 - DEBUG - Calling on_part_data with data[262109:262142]
+2025-03-06 13:45:59,238 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,238 - DEBUG - Calling on_part_data with data[262143:262144]
+2025-03-06 13:45:59,244 - DEBUG - Calling on_part_data with data[0:200076]
+2025-03-06 13:45:59,244 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,244 - DEBUG - Calling on_part_data with data[200077:252077]
+2025-03-06 13:45:59,244 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,244 - DEBUG - Calling on_part_data with data[252078:262134]
+2025-03-06 13:45:59,244 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,244 - DEBUG - Calling on_part_data with data[262135:262144]
+2025-03-06 13:45:59,245 - DEBUG - Calling on_part_data with data[0:14283]
+2025-03-06 13:45:59,245 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,245 - DEBUG - Calling on_part_data with data[14284:58799]
+2025-03-06 13:45:59,245 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,246 - DEBUG - Calling on_part_data with data[58800:131450]
+2025-03-06 13:45:59,246 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,246 - DEBUG - Calling on_part_data with data[131451:142111]
+2025-03-06 13:45:59,246 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,246 - DEBUG - Calling on_part_data with data[142112:262144]
+2025-03-06 13:45:59,249 - DEBUG - Calling on_part_data with data[0:42]
+2025-03-06 13:45:59,249 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,249 - DEBUG - Calling on_part_data with data[43:4383]
+2025-03-06 13:45:59,249 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:45:59,249 - DEBUG - Calling on_part_data with data[4384:88092]
+2025-03-06 13:45:59,249 - DEBUG - Calling on_part_end with no data
+2025-03-06 13:45:59,249 - DEBUG - Calling on_end with no data
+2025-03-06 13:45:59,252 - INFO - Received audio file: test.mp3
+2025-03-06 13:45:59,252 - DEBUG - Created directories - Input: temp/uploads/2caaef37-2bfa-4aae-8ca6-60c6553814b3.wav, Output: temp/separated/2caaef37-2bfa-4aae-8ca6-60c6553814b3
+2025-03-06 13:45:59,253 - DEBUG - Read file content, size: 3232958 bytes
+2025-03-06 13:45:59,257 - INFO - Saved uploaded file to temp/uploads/2caaef37-2bfa-4aae-8ca6-60c6553814b3.wav
+2025-03-06 13:46:00,550 - DEBUG - Audio file loaded successfully, shape: torch.Size([1, 2, 8908200])
+2025-03-06 13:46:00,551 - INFO - Starting audio separation...
+2025-03-06 13:47:30,809 - INFO - Audio separation completed successfully
+2025-03-06 13:47:30,819 - ERROR - Error saving track drums: 'AudioFile' object has no attribute 'write'
+2025-03-06 13:47:30,820 - ERROR - Unexpected error: 
+Traceback (most recent call last):
+  File "/Users/alan/code/audio-jam/src/backend/main.py", line 97, in separate_audio
+    AudioFile(out_path).write(audio, model.samplerate)
+AttributeError: 'AudioFile' object has no attribute 'write'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/alan/code/audio-jam/src/backend/main.py", line 102, in separate_audio
+    raise HTTPException(status_code=500, detail=f"保存音轨 {source} 失败")
+fastapi.exceptions.HTTPException
+2025-03-06 13:47:30,852 - DEBUG - Cleaned up input file: temp/uploads/2caaef37-2bfa-4aae-8ca6-60c6553814b3.wav
+2025-03-06 13:48:39,246 - INFO - Starting application with directories:
+2025-03-06 13:48:39,246 - INFO - Upload directory: /Users/alan/code/audio-jam/src/backend/temp/uploads
+2025-03-06 13:48:39,246 - INFO - Output directory: /Users/alan/code/audio-jam/src/backend/temp/separated
+2025-03-06 13:48:39,442 - INFO - Model loaded successfully. Using device: cpu
+2025-03-06 13:48:53,558 - DEBUG - Calling on_part_begin with no data
+2025-03-06 13:48:53,559 - DEBUG - Calling on_header_field with data[42:61]
+2025-03-06 13:48:53,559 - DEBUG - Calling on_header_value with data[63:107]
+2025-03-06 13:48:53,559 - DEBUG - Calling on_header_end with no data
+2025-03-06 13:48:53,560 - DEBUG - Calling on_header_field with data[109:121]
+2025-03-06 13:48:53,560 - DEBUG - Calling on_header_value with data[123:133]
+2025-03-06 13:48:53,560 - DEBUG - Calling on_header_end with no data
+2025-03-06 13:48:53,560 - DEBUG - Calling on_headers_finished with no data
+2025-03-06 13:48:53,560 - DEBUG - Calling on_part_data with data[137:97949]
+2025-03-06 13:48:53,560 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,560 - DEBUG - Calling on_part_data with data[97950:174992]
+2025-03-06 13:48:53,560 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,561 - DEBUG - Calling on_part_data with data[174993:261419]
+2025-03-06 13:48:53,562 - DEBUG - Calling on_part_data with data[0:223767]
+2025-03-06 13:48:53,562 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,562 - DEBUG - Calling on_part_data with data[223768:262144]
+2025-03-06 13:48:53,563 - DEBUG - Calling on_part_data with data[0:82645]
+2025-03-06 13:48:53,600 - DEBUG - Calling on_part_data with data[0:49152]
+2025-03-06 13:48:53,909 - DEBUG - Calling on_part_data with data[0:87503]
+2025-03-06 13:48:53,909 - DEBUG - Calling on_part_data with data[0:2]
+2025-03-06 13:48:53,909 - DEBUG - Calling on_part_data with data[87505:98304]
+2025-03-06 13:48:53,910 - DEBUG - Calling on_part_data with data[0:44422]
+2025-03-06 13:48:53,910 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,911 - DEBUG - Calling on_part_data with data[44423:71426]
+2025-03-06 13:48:53,911 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,912 - DEBUG - Calling on_part_data with data[71427:220031]
+2025-03-06 13:48:53,912 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,912 - DEBUG - Calling on_part_data with data[220032:262144]
+2025-03-06 13:48:53,913 - DEBUG - Calling on_part_data with data[0:75118]
+2025-03-06 13:48:53,914 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,915 - DEBUG - Calling on_part_data with data[75119:124005]
+2025-03-06 13:48:53,915 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,916 - DEBUG - Calling on_part_data with data[124006:262144]
+2025-03-06 13:48:53,926 - DEBUG - Calling on_part_data with data[0:73930]
+2025-03-06 13:48:53,926 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,926 - DEBUG - Calling on_part_data with data[73931:128690]
+2025-03-06 13:48:53,926 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,926 - DEBUG - Calling on_part_data with data[128691:170930]
+2025-03-06 13:48:53,926 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,927 - DEBUG - Calling on_part_data with data[170931:262144]
+2025-03-06 13:48:53,928 - DEBUG - Calling on_part_data with data[0:67886]
+2025-03-06 13:48:53,928 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,929 - DEBUG - Calling on_part_data with data[67887:85967]
+2025-03-06 13:48:53,929 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,929 - DEBUG - Calling on_part_data with data[85968:90853]
+2025-03-06 13:48:53,929 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,929 - DEBUG - Calling on_part_data with data[90854:164125]
+2025-03-06 13:48:53,929 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,930 - DEBUG - Calling on_part_data with data[164126:253927]
+2025-03-06 13:48:53,930 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,930 - DEBUG - Calling on_part_data with data[253928:262144]
+2025-03-06 13:48:53,932 - DEBUG - Calling on_part_data with data[0:23730]
+2025-03-06 13:48:53,932 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,933 - DEBUG - Calling on_part_data with data[23731:262144]
+2025-03-06 13:48:53,935 - DEBUG - Calling on_part_data with data[0:118513]
+2025-03-06 13:48:53,935 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,936 - DEBUG - Calling on_part_data with data[118514:262144]
+2025-03-06 13:48:53,937 - DEBUG - Calling on_part_data with data[0:253934]
+2025-03-06 13:48:53,937 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,937 - DEBUG - Calling on_part_data with data[253935:258571]
+2025-03-06 13:48:53,937 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,937 - DEBUG - Calling on_part_data with data[258572:262144]
+2025-03-06 13:48:53,938 - DEBUG - Calling on_part_data with data[0:378]
+2025-03-06 13:48:53,938 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,939 - DEBUG - Calling on_part_data with data[379:191057]
+2025-03-06 13:48:53,939 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,939 - DEBUG - Calling on_part_data with data[191058:196833]
+2025-03-06 13:48:53,939 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,939 - DEBUG - Calling on_part_data with data[196834:228811]
+2025-03-06 13:48:53,939 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,939 - DEBUG - Calling on_part_data with data[228812:257359]
+2025-03-06 13:48:53,939 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,940 - DEBUG - Calling on_part_data with data[257360:262144]
+2025-03-06 13:48:53,941 - DEBUG - Calling on_part_data with data[0:23587]
+2025-03-06 13:48:53,941 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,942 - DEBUG - Calling on_part_data with data[23588:66451]
+2025-03-06 13:48:53,942 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,942 - DEBUG - Calling on_part_data with data[66452:98351]
+2025-03-06 13:48:53,942 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,942 - DEBUG - Calling on_part_data with data[98352:200546]
+2025-03-06 13:48:53,942 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,942 - DEBUG - Calling on_part_data with data[200547:262144]
+2025-03-06 13:48:53,944 - DEBUG - Calling on_part_data with data[0:61514]
+2025-03-06 13:48:53,944 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,944 - DEBUG - Calling on_part_data with data[61515:119733]
+2025-03-06 13:48:53,944 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 13:48:53,944 - DEBUG - Calling on_part_data with data[119734:120135]
+2025-03-06 13:48:53,944 - DEBUG - Calling on_part_end with no data
+2025-03-06 13:48:53,944 - DEBUG - Calling on_end with no data
+2025-03-06 13:48:53,946 - INFO - Received audio file: test.mp3
+2025-03-06 13:48:53,947 - DEBUG - Created directories - Input: temp/uploads/9f686e66-d17c-407f-8baf-57eec9bf318c.wav, Output: temp/separated/9f686e66-d17c-407f-8baf-57eec9bf318c
+2025-03-06 13:48:53,948 - DEBUG - Read file content, size: 3232958 bytes
+2025-03-06 13:48:53,949 - INFO - Saved uploaded file to temp/uploads/9f686e66-d17c-407f-8baf-57eec9bf318c.wav
+2025-03-06 13:48:54,592 - DEBUG - Audio file loaded successfully, shape: torch.Size([1, 2, 8908200])
+2025-03-06 13:48:54,592 - INFO - Starting audio separation...
+2025-03-06 13:50:27,514 - INFO - Audio separation completed successfully
+2025-03-06 13:50:27,519 - ERROR - Error saving track drums: Expected 2D Tensor, got 3D.
+2025-03-06 13:50:27,519 - ERROR - Unexpected error: 
+Traceback (most recent call last):
+  File "/Users/alan/code/audio-jam/src/backend/main.py", line 102, in separate_audio
+    torchaudio.save(out_path, audio, model.samplerate)
+  File "/opt/anaconda3/envs/audio-env/lib/python3.9/site-packages/torchaudio/_backend/utils.py", line 313, in save
+    return backend.save(
+  File "/opt/anaconda3/envs/audio-env/lib/python3.9/site-packages/torchaudio/_backend/soundfile.py", line 44, in save
+    soundfile_backend.save(
+  File "/opt/anaconda3/envs/audio-env/lib/python3.9/site-packages/torchaudio/_backend/soundfile_backend.py", line 427, in save
+    raise ValueError(f"Expected 2D Tensor, got {src.ndim}D.")
+ValueError: Expected 2D Tensor, got 3D.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/alan/code/audio-jam/src/backend/main.py", line 107, in separate_audio
+    raise HTTPException(status_code=500, detail=f"保存音轨 {source} 失败")
+fastapi.exceptions.HTTPException
+2025-03-06 13:50:27,524 - DEBUG - Cleaned up input file: temp/uploads/9f686e66-d17c-407f-8baf-57eec9bf318c.wav
+2025-03-06 13:51:29,453 - INFO - Starting application with directories:
+2025-03-06 13:51:29,453 - INFO - Upload directory: /Users/alan/code/audio-jam/src/backend/temp/uploads
+2025-03-06 13:51:29,453 - INFO - Output directory: /Users/alan/code/audio-jam/src/backend/temp/separated
+2025-03-06 13:51:29,640 - INFO - Model loaded successfully. Using device: cpu
