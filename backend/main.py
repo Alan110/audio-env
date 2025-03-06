@@ -5,12 +5,13 @@ import os
 from uuid import uuid4
 from demucs import pretrained
 from demucs.audio import AudioFile
-from demucs.apply import apply_model
 import torch
 import torchaudio
 import numpy as np
 import logging
+import subprocess
 from datetime import datetime
+import glob
 
 # 配置日志
 logging.basicConfig(
@@ -93,39 +94,66 @@ async def separate_audio(audio: UploadFile = File(...)):
             f.write(content)
         logger.info(f"Saved uploaded file to {input_path}")
         
-        # 加载音频
-        try:
-            wav = AudioFile(input_path).read()
-            logger.debug(f"Audio file loaded successfully, shape: {wav.shape}")
-        except Exception as e:
-            logger.error(f"Error loading audio file: {str(e)}")
-            raise HTTPException(status_code=400, detail="无法读取音频文件")
-        
         # 分离音轨
         logger.info("Starting audio separation...")
-        with torch.no_grad():
-            try:
-                sources = apply_model(model, wav, device='cuda' if torch.cuda.is_available() else 'cpu')
-                logger.info("Audio separation completed successfully")
-            except Exception as e:
-                logger.error(f"Error during audio separation: {str(e)}")
-                raise HTTPException(status_code=500, detail="音轨分离失败")
+        try:
+            # 使用命令行接口分离音频
+            cmd = [
+                "python", "-m", "demucs.separate", 
+                "-n", "htdemucs", 
+                "-o", os.path.dirname(output_path),
+                input_path
+            ]
+            logger.debug(f"Running command: {' '.join(cmd)}")
+            
+            process = subprocess.run(
+                cmd,
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            
+            logger.debug(f"Command output: {process.stdout}")
+            if process.stderr:
+                logger.warning(f"Command stderr: {process.stderr}")
+            
+            logger.info("Audio separation completed successfully")
+        except Exception as e:
+            logger.error(f"Error during audio separation: {str(e)}")
+            raise HTTPException(status_code=500, detail="音轨分离失败")
         
-        # 保存分离后的音轨
+        # 构建音轨路径
         track_paths = {}
-        for source, audio in zip(model.sources, sources):
-            out_path = os.path.join(output_path, f"{source}.wav")
-            try:
-                # 处理音频数据
-                processed_audio = process_audio_tensor(audio)
+        
+        # 查找 demucs 生成的文件
+        # demucs 默认会在 separated/htdemucs/[filename] 目录下创建文件
+        demucs_output_dir = os.path.join(os.path.dirname(output_path), "htdemucs")
+        
+        # 获取输入文件名（不含扩展名）
+        input_filename = os.path.splitext(os.path.basename(input_path))[0]
+        
+        # 查找生成的文件夹
+        potential_dirs = glob.glob(os.path.join(demucs_output_dir, "*"))
+        logger.debug(f"Found potential output directories: {potential_dirs}")
+        
+        # 查找包含分离音轨的目录
+        for dir_path in potential_dirs:
+            if os.path.isdir(dir_path):
+                # 查找所有 .wav 文件
+                wav_files = glob.glob(os.path.join(dir_path, "*.wav"))
+                logger.debug(f"Found wav files in {dir_path}: {wav_files}")
                 
-                # 保存音频文件
-                torchaudio.save(out_path, processed_audio, model.samplerate)
-                track_paths[source] = f"/audio/{file_id}/{source}.wav"
-                logger.debug(f"Saved track {source} to {out_path}")
-            except Exception as e:
-                logger.error(f"Error saving track {source}: {str(e)}, audio shape: {processed_audio.shape if torch.is_tensor(processed_audio) else 'not a tensor'}")
-                raise HTTPException(status_code=500, detail=f"保存音轨 {source} 失败")
+                for wav_file in wav_files:
+                    # 获取音轨名称（文件名）
+                    stem = os.path.splitext(os.path.basename(wav_file))[0]
+                    
+                    # 复制到我们的输出目录
+                    target_path = os.path.join(output_path, f"{stem}.wav")
+                    os.system(f"cp '{wav_file}' '{target_path}'")
+                    
+                    # 添加到返回路径
+                    track_paths[stem] = f"/audio/{file_id}/{stem}.wav"
+                    logger.debug(f"Found and copied track: {stem} from {wav_file} to {target_path}")
         
         logger.info(f"All tracks saved successfully: {track_paths}")
         return track_paths

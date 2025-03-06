@@ -540,3 +540,317 @@ fastapi.exceptions.HTTPException
 2025-03-06 14:00:28,047 - DEBUG - Saved track drums to temp/separated/f9128d85-12d5-4ca6-96fc-c807a8586fde/drums.wav
 2025-03-06 14:00:28,047 - INFO - All tracks saved successfully: {'drums': '/audio/f9128d85-12d5-4ca6-96fc-c807a8586fde/drums.wav'}
 2025-03-06 14:00:28,079 - DEBUG - Cleaned up input file: temp/uploads/f9128d85-12d5-4ca6-96fc-c807a8586fde.wav
+2025-03-06 16:04:58,743 - INFO - Starting application with directories:
+2025-03-06 16:04:58,743 - INFO - Upload directory: /Users/alan/code/audio-jam/src/backend/temp/uploads
+2025-03-06 16:04:58,744 - INFO - Output directory: /Users/alan/code/audio-jam/src/backend/temp/separated
+2025-03-06 16:04:58,960 - INFO - Model loaded successfully. Using device: cpu
+2025-03-06 16:06:25,343 - INFO - Starting application with directories:
+2025-03-06 16:06:25,343 - INFO - Upload directory: /Users/alan/code/audio-jam/src/backend/temp/uploads
+2025-03-06 16:06:25,344 - INFO - Output directory: /Users/alan/code/audio-jam/src/backend/temp/separated
+2025-03-06 16:06:25,578 - INFO - Model loaded successfully. Using device: cpu
+2025-03-06 16:07:11,926 - DEBUG - Calling on_part_begin with no data
+2025-03-06 16:07:11,926 - DEBUG - Calling on_header_field with data[42:61]
+2025-03-06 16:07:11,927 - DEBUG - Calling on_header_value with data[63:107]
+2025-03-06 16:07:11,927 - DEBUG - Calling on_header_end with no data
+2025-03-06 16:07:11,927 - DEBUG - Calling on_header_field with data[109:121]
+2025-03-06 16:07:11,927 - DEBUG - Calling on_header_value with data[123:133]
+2025-03-06 16:07:11,927 - DEBUG - Calling on_header_end with no data
+2025-03-06 16:07:11,927 - DEBUG - Calling on_headers_finished with no data
+2025-03-06 16:07:11,927 - DEBUG - Calling on_part_data with data[137:24489]
+2025-03-06 16:07:11,927 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,927 - DEBUG - Calling on_part_data with data[24490:77649]
+2025-03-06 16:07:11,927 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,927 - DEBUG - Calling on_part_data with data[77650:137529]
+2025-03-06 16:07:11,927 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,928 - DEBUG - Calling on_part_data with data[137530:169304]
+2025-03-06 16:07:11,928 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,928 - DEBUG - Calling on_part_data with data[169305:217656]
+2025-03-06 16:07:11,928 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,928 - DEBUG - Calling on_part_data with data[217657:261419]
+2025-03-06 16:07:11,929 - DEBUG - Calling on_part_data with data[0:105641]
+2025-03-06 16:07:11,929 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,929 - DEBUG - Calling on_part_data with data[105642:160405]
+2025-03-06 16:07:11,929 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,929 - DEBUG - Calling on_part_data with data[160406:176752]
+2025-03-06 16:07:11,929 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,929 - DEBUG - Calling on_part_data with data[176753:252045]
+2025-03-06 16:07:11,930 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,930 - DEBUG - Calling on_part_data with data[252046:262144]
+2025-03-06 16:07:11,930 - DEBUG - Calling on_part_data with data[0:27091]
+2025-03-06 16:07:11,930 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,931 - DEBUG - Calling on_part_data with data[27092:147695]
+2025-03-06 16:07:11,931 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,931 - DEBUG - Calling on_part_data with data[147696:262144]
+2025-03-06 16:07:11,932 - DEBUG - Calling on_part_data with data[0:145734]
+2025-03-06 16:07:11,932 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,932 - DEBUG - Calling on_part_data with data[145735:168695]
+2025-03-06 16:07:11,932 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,932 - DEBUG - Calling on_part_data with data[168696:262144]
+2025-03-06 16:07:11,933 - DEBUG - Calling on_part_data with data[0:32472]
+2025-03-06 16:07:11,933 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,933 - DEBUG - Calling on_part_data with data[32473:129497]
+2025-03-06 16:07:11,933 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,934 - DEBUG - Calling on_part_data with data[129498:262144]
+2025-03-06 16:07:11,957 - DEBUG - Calling on_part_data with data[0:36031]
+2025-03-06 16:07:11,957 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,957 - DEBUG - Calling on_part_data with data[36032:83009]
+2025-03-06 16:07:11,958 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,959 - DEBUG - Calling on_part_data with data[83010:207543]
+2025-03-06 16:07:11,960 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,960 - DEBUG - Calling on_part_data with data[207544:262144]
+2025-03-06 16:07:11,963 - DEBUG - Calling on_part_data with data[0:17827]
+2025-03-06 16:07:11,964 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,964 - DEBUG - Calling on_part_data with data[17828:46701]
+2025-03-06 16:07:11,964 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,964 - DEBUG - Calling on_part_data with data[46702:94751]
+2025-03-06 16:07:11,964 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,964 - DEBUG - Calling on_part_data with data[94752:104702]
+2025-03-06 16:07:11,964 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,964 - DEBUG - Calling on_part_data with data[104703:132082]
+2025-03-06 16:07:11,964 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,964 - DEBUG - Calling on_part_data with data[132083:165101]
+2025-03-06 16:07:11,964 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,965 - DEBUG - Calling on_part_data with data[165102:262144]
+2025-03-06 16:07:11,970 - DEBUG - Calling on_part_data with data[0:262144]
+2025-03-06 16:07:11,972 - DEBUG - Calling on_part_data with data[0:262144]
+2025-03-06 16:07:11,974 - DEBUG - Calling on_part_data with data[0:169220]
+2025-03-06 16:07:11,974 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:11,974 - DEBUG - Calling on_part_data with data[169221:211585]
+2025-03-06 16:07:12,145 - DEBUG - Calling on_part_data with data[0:121511]
+2025-03-06 16:07:12,145 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:12,145 - DEBUG - Calling on_part_data with data[121512:147229]
+2025-03-06 16:07:12,145 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:12,145 - DEBUG - Calling on_part_data with data[147230:164292]
+2025-03-06 16:07:12,145 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:12,145 - DEBUG - Calling on_part_data with data[164293:170574]
+2025-03-06 16:07:12,145 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:12,145 - DEBUG - Calling on_part_data with data[170575:202315]
+2025-03-06 16:07:12,146 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:12,146 - DEBUG - Calling on_part_data with data[202316:203748]
+2025-03-06 16:07:12,146 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:12,146 - DEBUG - Calling on_part_data with data[203749:215124]
+2025-03-06 16:07:12,148 - DEBUG - Calling on_part_data with data[0:131987]
+2025-03-06 16:07:12,149 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:12,149 - DEBUG - Calling on_part_data with data[131988:157601]
+2025-03-06 16:07:12,149 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:12,149 - DEBUG - Calling on_part_data with data[157602:229376]
+2025-03-06 16:07:12,302 - DEBUG - Calling on_part_data with data[0:30207]
+2025-03-06 16:07:12,303 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:12,303 - DEBUG - Calling on_part_data with data[30208:35812]
+2025-03-06 16:07:12,303 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:07:12,305 - DEBUG - Calling on_part_data with data[35813:120280]
+2025-03-06 16:07:12,314 - DEBUG - Calling on_part_data with data[0:98159]
+2025-03-06 16:07:12,314 - DEBUG - Calling on_part_end with no data
+2025-03-06 16:07:12,315 - DEBUG - Calling on_end with no data
+2025-03-06 16:07:12,317 - INFO - Received audio file: test.mp3
+2025-03-06 16:07:12,317 - DEBUG - Created directories - Input: temp/uploads/737389b2-2979-4635-975e-6b5355568f16.wav, Output: temp/separated/737389b2-2979-4635-975e-6b5355568f16
+2025-03-06 16:07:12,318 - DEBUG - Read file content, size: 3232958 bytes
+2025-03-06 16:07:12,319 - INFO - Saved uploaded file to temp/uploads/737389b2-2979-4635-975e-6b5355568f16.wav
+2025-03-06 16:07:12,319 - INFO - Starting audio separation...
+2025-03-06 16:07:12,319 - DEBUG - Running command: python -m demucs.separate -n htdemucs --two-stems=vocals -o temp/separated --filename 737389b2-2979-4635-975e-6b5355568f16/{stem}.{ext} temp/uploads/737389b2-2979-4635-975e-6b5355568f16.wav
+2025-03-06 16:08:49,495 - DEBUG - Command output: Selected model is a bag of 1 models. You will see that many progress bars per track.
+Separated tracks will be stored in /Users/alan/code/audio-jam/src/backend/temp/separated/htdemucs
+Separating track temp/uploads/737389b2-2979-4635-975e-6b5355568f16.wav
+
+2025-03-06 16:08:49,498 - WARNING - Command stderr: 
+  0%|                                                                                 | 0.0/204.75 [00:00<?, ?seconds/s]
+  3%|██                                                                      | 5.85/204.75 [00:03<02:11,  1.51seconds/s]
+  6%|████                                                                    | 11.7/204.75 [00:06<01:43,  1.87seconds/s]
+  9%|████▉                                                     | 17.549999999999997/204.75 [00:08<01:30,  2.07seconds/s]
+ 11%|████████▏                                                               | 23.4/204.75 [00:11<01:26,  2.10seconds/s]
+ 14%|██████████▏                                                            | 29.25/204.75 [00:14<01:20,  2.19seconds/s]
+ 17%|█████████▉                                                | 35.099999999999994/204.75 [00:16<01:16,  2.23seconds/s]
+ 20%|███████████▌                                              | 40.949999999999996/204.75 [00:19<01:13,  2.22seconds/s]
+ 23%|████████████████▍                                                       | 46.8/204.75 [00:21<01:10,  2.24seconds/s]
+ 26%|██████████████████▎                                                    | 52.65/204.75 [00:24<01:07,  2.26seconds/s]
+ 29%|████████████████████▌                                                   | 58.5/204.75 [00:26<01:04,  2.28seconds/s]
+ 31%|██████████████████████▎                                                | 64.35/204.75 [00:29<01:00,  2.32seconds/s]
+ 34%|████████████████████▏                                      | 70.19999999999999/204.75 [00:31<00:57,  2.33seconds/s]
+ 37%|██████████████████████████▎                                            | 76.05/204.75 [00:34<00:56,  2.28seconds/s]
+ 40%|███████████████████████▌                                   | 81.89999999999999/204.75 [00:37<00:53,  2.29seconds/s]
+ 43%|██████████████████████████████▍                                        | 87.75/204.75 [00:39<00:50,  2.32seconds/s]
+ 46%|████████████████████████████████▉                                       | 93.6/204.75 [00:42<00:48,  2.31seconds/s]
+ 49%|████████████████████████████▋                              | 99.44999999999999/204.75 [00:44<00:46,  2.28seconds/s]
+ 51%|████████████████████████████████████▌                                  | 105.3/204.75 [00:47<00:43,  2.30seconds/s]
+ 54%|███████████████████████████████▍                          | 111.14999999999999/204.75 [00:49<00:40,  2.33seconds/s]
+ 57%|████████████████████████████████████████▌                              | 117.0/204.75 [00:52<00:37,  2.34seconds/s]
+ 60%|██████████████████████████████████████████                            | 122.85/204.75 [00:54<00:35,  2.33seconds/s]
+ 63%|████████████████████████████████████████████▋                          | 128.7/204.75 [00:57<00:35,  2.12seconds/s]
+ 66%|██████████████████████████████████████                    | 134.54999999999998/204.75 [01:00<00:33,  2.11seconds/s]
+ 69%|███████████████████████████████████████▊                  | 140.39999999999998/204.75 [01:03<00:30,  2.12seconds/s]
+ 71%|██████████████████████████████████████████████████                    | 146.25/204.75 [01:06<00:27,  2.15seconds/s]
+ 74%|████████████████████████████████████████████████████▋                  | 152.1/204.75 [01:08<00:24,  2.17seconds/s]
+ 77%|█████████████████████████████████████████████████████▉                | 157.95/204.75 [01:11<00:21,  2.22seconds/s]
+ 80%|██████████████████████████████████████████████▍           | 163.79999999999998/204.75 [01:13<00:18,  2.24seconds/s]
+ 83%|████████████████████████████████████████████████          | 169.64999999999998/204.75 [01:16<00:15,  2.26seconds/s]
+ 86%|████████████████████████████████████████████████████████████▊          | 175.5/204.75 [01:19<00:13,  2.23seconds/s]
+ 89%|██████████████████████████████████████████████████████████████        | 181.35/204.75 [01:21<00:10,  2.26seconds/s]
+ 91%|████████████████████████████████████████████████████████████████▉      | 187.2/204.75 [01:24<00:07,  2.27seconds/s]
+ 94%|██████████████████████████████████████████████████████▋   | 193.04999999999998/204.75 [01:26<00:05,  2.26seconds/s]
+ 97%|████████████████████████████████████████████████████████▎ | 198.89999999999998/204.75 [01:29<00:02,  2.23seconds/s]
+100%|██████████████████████████████████████████████████████████████████████| 204.75/204.75 [01:31<00:00,  2.28seconds/s]
+100%|██████████████████████████████████████████████████████████████████████| 204.75/204.75 [01:31<00:00,  2.23seconds/s]
+
+2025-03-06 16:08:49,500 - INFO - Audio separation completed successfully
+2025-03-06 16:08:49,501 - WARNING - Expected track not found: temp/separated/737389b2-2979-4635-975e-6b5355568f16/vocals.wav
+2025-03-06 16:08:49,501 - WARNING - Expected track not found: temp/separated/737389b2-2979-4635-975e-6b5355568f16/no_vocals.wav
+2025-03-06 16:08:49,501 - INFO - All tracks saved successfully: {}
+2025-03-06 16:08:49,503 - DEBUG - Cleaned up input file: temp/uploads/737389b2-2979-4635-975e-6b5355568f16.wav
+2025-03-06 16:12:36,211 - INFO - Starting application with directories:
+2025-03-06 16:12:36,211 - INFO - Upload directory: /Users/alan/code/audio-jam/src/backend/temp/uploads
+2025-03-06 16:12:36,211 - INFO - Output directory: /Users/alan/code/audio-jam/src/backend/temp/separated
+2025-03-06 16:12:36,419 - INFO - Model loaded successfully. Using device: cpu
+2025-03-06 16:12:47,226 - DEBUG - Calling on_part_begin with no data
+2025-03-06 16:12:47,227 - DEBUG - Calling on_header_field with data[42:61]
+2025-03-06 16:12:47,227 - DEBUG - Calling on_header_value with data[63:107]
+2025-03-06 16:12:47,227 - DEBUG - Calling on_header_end with no data
+2025-03-06 16:12:47,227 - DEBUG - Calling on_header_field with data[109:121]
+2025-03-06 16:12:47,227 - DEBUG - Calling on_header_value with data[123:133]
+2025-03-06 16:12:47,227 - DEBUG - Calling on_header_end with no data
+2025-03-06 16:12:47,227 - DEBUG - Calling on_headers_finished with no data
+2025-03-06 16:12:47,228 - DEBUG - Calling on_part_data with data[137:107671]
+2025-03-06 16:12:47,228 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,228 - DEBUG - Calling on_part_data with data[107672:123625]
+2025-03-06 16:12:47,228 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,228 - DEBUG - Calling on_part_data with data[123626:219809]
+2025-03-06 16:12:47,228 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,229 - DEBUG - Calling on_part_data with data[219810:247051]
+2025-03-06 16:12:47,229 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,229 - DEBUG - Calling on_part_data with data[247052:261419]
+2025-03-06 16:12:47,229 - DEBUG - Calling on_part_data with data[0:29067]
+2025-03-06 16:12:47,229 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,230 - DEBUG - Calling on_part_data with data[29068:252045]
+2025-03-06 16:12:47,230 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,230 - DEBUG - Calling on_part_data with data[252046:262144]
+2025-03-06 16:12:47,231 - DEBUG - Calling on_part_data with data[0:64124]
+2025-03-06 16:12:47,231 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,231 - DEBUG - Calling on_part_data with data[64125:75156]
+2025-03-06 16:12:47,231 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,231 - DEBUG - Calling on_part_data with data[75157:147125]
+2025-03-06 16:12:47,231 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,231 - DEBUG - Calling on_part_data with data[147126:207237]
+2025-03-06 16:12:47,231 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,231 - DEBUG - Calling on_part_data with data[207238:243303]
+2025-03-06 16:12:47,231 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,232 - DEBUG - Calling on_part_data with data[243304:262144]
+2025-03-06 16:12:47,232 - DEBUG - Calling on_part_data with data[0:188585]
+2025-03-06 16:12:47,233 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,233 - DEBUG - Calling on_part_data with data[188586:208207]
+2025-03-06 16:12:47,233 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,233 - DEBUG - Calling on_part_data with data[208208:262144]
+2025-03-06 16:12:47,233 - DEBUG - Calling on_part_data with data[0:103366]
+2025-03-06 16:12:47,233 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,234 - DEBUG - Calling on_part_data with data[103367:226418]
+2025-03-06 16:12:47,234 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,234 - DEBUG - Calling on_part_data with data[226419:255628]
+2025-03-06 16:12:47,234 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,234 - DEBUG - Calling on_part_data with data[255629:262144]
+2025-03-06 16:12:47,244 - DEBUG - Calling on_part_data with data[0:131797]
+2025-03-06 16:12:47,604 - DEBUG - Calling on_part_data with data[0:122354]
+2025-03-06 16:12:47,604 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,605 - DEBUG - Calling on_part_data with data[122355:174844]
+2025-03-06 16:12:47,605 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,605 - DEBUG - Calling on_part_data with data[174845:262144]
+2025-03-06 16:12:47,608 - DEBUG - Calling on_part_data with data[0:89546]
+2025-03-06 16:12:47,608 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,609 - DEBUG - Calling on_part_data with data[89547:262144]
+2025-03-06 16:12:47,610 - DEBUG - Calling on_part_data with data[0:62387]
+2025-03-06 16:12:47,610 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,611 - DEBUG - Calling on_part_data with data[62388:87294]
+2025-03-06 16:12:47,611 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,611 - DEBUG - Calling on_part_data with data[87295:262144]
+2025-03-06 16:12:47,613 - DEBUG - Calling on_part_data with data[0:48183]
+2025-03-06 16:12:47,613 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,613 - DEBUG - Calling on_part_data with data[48184:66304]
+2025-03-06 16:12:47,613 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,613 - DEBUG - Calling on_part_data with data[66305:99882]
+2025-03-06 16:12:47,613 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,613 - DEBUG - Calling on_part_data with data[99883:210988]
+2025-03-06 16:12:47,613 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,613 - DEBUG - Calling on_part_data with data[210989:262144]
+2025-03-06 16:12:47,615 - DEBUG - Calling on_part_data with data[0:197837]
+2025-03-06 16:12:47,615 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,615 - DEBUG - Calling on_part_data with data[197838:230988]
+2025-03-06 16:12:47,616 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,616 - DEBUG - Calling on_part_data with data[230989:249364]
+2025-03-06 16:12:47,616 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,616 - DEBUG - Calling on_part_data with data[249365:262144]
+2025-03-06 16:12:47,618 - DEBUG - Calling on_part_data with data[0:12716]
+2025-03-06 16:12:47,618 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,618 - DEBUG - Calling on_part_data with data[12717:89814]
+2025-03-06 16:12:47,618 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,618 - DEBUG - Calling on_part_data with data[89815:155826]
+2025-03-06 16:12:47,618 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,618 - DEBUG - Calling on_part_data with data[155827:172893]
+2025-03-06 16:12:47,618 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,619 - DEBUG - Calling on_part_data with data[172894:196655]
+2025-03-06 16:12:47,619 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,619 - DEBUG - Calling on_part_data with data[196656:262144]
+2025-03-06 16:12:47,621 - DEBUG - Calling on_part_data with data[0:175405]
+2025-03-06 16:12:47,621 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,621 - DEBUG - Calling on_part_data with data[175406:194829]
+2025-03-06 16:12:47,621 - DEBUG - Calling on_part_data with data[0:1]
+2025-03-06 16:12:47,621 - DEBUG - Calling on_part_data with data[194830:218439]
+2025-03-06 16:12:47,621 - DEBUG - Calling on_part_end with no data
+2025-03-06 16:12:47,621 - DEBUG - Calling on_end with no data
+2025-03-06 16:12:47,623 - INFO - Received audio file: test.mp3
+2025-03-06 16:12:47,623 - DEBUG - Created directories - Input: temp/uploads/43e76be2-804a-40c8-a0aa-935950c34b73.wav, Output: temp/separated/43e76be2-804a-40c8-a0aa-935950c34b73
+2025-03-06 16:12:47,624 - DEBUG - Read file content, size: 3232958 bytes
+2025-03-06 16:12:47,626 - INFO - Saved uploaded file to temp/uploads/43e76be2-804a-40c8-a0aa-935950c34b73.wav
+2025-03-06 16:12:47,626 - INFO - Starting audio separation...
+2025-03-06 16:12:47,626 - DEBUG - Running command: python -m demucs.separate -n htdemucs -o temp/separated temp/uploads/43e76be2-804a-40c8-a0aa-935950c34b73.wav
+2025-03-06 16:14:20,815 - DEBUG - Command output: Selected model is a bag of 1 models. You will see that many progress bars per track.
+Separated tracks will be stored in /Users/alan/code/audio-jam/src/backend/temp/separated/htdemucs
+Separating track temp/uploads/43e76be2-804a-40c8-a0aa-935950c34b73.wav
+
+2025-03-06 16:14:20,816 - WARNING - Command stderr: 
+  0%|                                                                                 | 0.0/204.75 [00:00<?, ?seconds/s]
+  3%|██                                                                      | 5.85/204.75 [00:03<02:00,  1.65seconds/s]
+  6%|████                                                                    | 11.7/204.75 [00:06<01:36,  1.99seconds/s]
+  9%|████▉                                                     | 17.549999999999997/204.75 [00:08<01:26,  2.17seconds/s]
+ 11%|████████▏                                                               | 23.4/204.75 [00:10<01:19,  2.29seconds/s]
+ 14%|██████████▏                                                            | 29.25/204.75 [00:13<01:14,  2.35seconds/s]
+ 17%|█████████▉                                                | 35.099999999999994/204.75 [00:15<01:11,  2.36seconds/s]
+ 20%|███████████▌                                              | 40.949999999999996/204.75 [00:17<01:08,  2.41seconds/s]
+ 23%|████████████████▍                                                       | 46.8/204.75 [00:20<01:06,  2.37seconds/s]
+ 26%|██████████████████▎                                                    | 52.65/204.75 [00:22<01:04,  2.37seconds/s]
+ 29%|████████████████████▌                                                   | 58.5/204.75 [00:25<01:03,  2.31seconds/s]
+ 31%|██████████████████████▎                                                | 64.35/204.75 [00:28<00:59,  2.34seconds/s]
+ 34%|████████████████████▏                                      | 70.19999999999999/204.75 [00:30<00:57,  2.35seconds/s]
+ 37%|██████████████████████████▎                                            | 76.05/204.75 [00:32<00:53,  2.39seconds/s]
+ 40%|███████████████████████▌                                   | 81.89999999999999/204.75 [00:35<00:52,  2.34seconds/s]
+ 43%|██████████████████████████████▍                                        | 87.75/204.75 [00:38<00:50,  2.32seconds/s]
+ 46%|████████████████████████████████▉                                       | 93.6/204.75 [00:40<00:46,  2.37seconds/s]
+ 49%|████████████████████████████▋                              | 99.44999999999999/204.75 [00:42<00:43,  2.40seconds/s]
+ 51%|████████████████████████████████████▌                                  | 105.3/204.75 [00:45<00:41,  2.39seconds/s]
+ 54%|███████████████████████████████▍                          | 111.14999999999999/204.75 [00:47<00:39,  2.38seconds/s]
+ 57%|████████████████████████████████████████▌                              | 117.0/204.75 [00:50<00:37,  2.34seconds/s]
+ 60%|██████████████████████████████████████████                            | 122.85/204.75 [00:52<00:34,  2.34seconds/s]
+ 63%|████████████████████████████████████████████▋                          | 128.7/204.75 [00:55<00:32,  2.34seconds/s]
+ 66%|██████████████████████████████████████                    | 134.54999999999998/204.75 [00:57<00:29,  2.39seconds/s]
+ 69%|███████████████████████████████████████▊                  | 140.39999999999998/204.75 [01:00<00:27,  2.30seconds/s]
+ 71%|██████████████████████████████████████████████████                    | 146.25/204.75 [01:02<00:25,  2.33seconds/s]
+ 74%|████████████████████████████████████████████████████▋                  | 152.1/204.75 [01:05<00:22,  2.29seconds/s]
+ 77%|█████████████████████████████████████████████████████▉                | 157.95/204.75 [01:08<00:20,  2.27seconds/s]
+ 80%|██████████████████████████████████████████████▍           | 163.79999999999998/204.75 [01:10<00:17,  2.32seconds/s]
+ 83%|████████████████████████████████████████████████          | 169.64999999999998/204.75 [01:13<00:15,  2.33seconds/s]
+ 86%|████████████████████████████████████████████████████████████▊          | 175.5/204.75 [01:15<00:13,  2.23seconds/s]
+ 89%|██████████████████████████████████████████████████████████████        | 181.35/204.75 [01:18<00:10,  2.22seconds/s]
+ 91%|████████████████████████████████████████████████████████████████▉      | 187.2/204.75 [01:21<00:07,  2.21seconds/s]
+ 94%|██████████████████████████████████████████████████████▋   | 193.04999999999998/204.75 [01:23<00:05,  2.22seconds/s]
+ 97%|████████████████████████████████████████████████████████▎ | 198.89999999999998/204.75 [01:26<00:02,  2.22seconds/s]
+100%|██████████████████████████████████████████████████████████████████████| 204.75/204.75 [01:29<00:00,  2.20seconds/s]
+100%|██████████████████████████████████████████████████████████████████████| 204.75/204.75 [01:29<00:00,  2.29seconds/s]
+
+2025-03-06 16:14:20,817 - INFO - Audio separation completed successfully
+2025-03-06 16:14:20,818 - DEBUG - Found potential output directories: ['temp/separated/htdemucs/737389b2-2979-4635-975e-6b5355568f16', 'temp/separated/htdemucs/43e76be2-804a-40c8-a0aa-935950c34b73']
+2025-03-06 16:14:20,818 - DEBUG - Found wav files in temp/separated/htdemucs/737389b2-2979-4635-975e-6b5355568f16: ['temp/separated/htdemucs/737389b2-2979-4635-975e-6b5355568f16/vocals.wav', 'temp/separated/htdemucs/737389b2-2979-4635-975e-6b5355568f16/no_vocals.wav']
+2025-03-06 16:14:21,113 - DEBUG - Found and copied track: vocals from temp/separated/htdemucs/737389b2-2979-4635-975e-6b5355568f16/vocals.wav to temp/separated/43e76be2-804a-40c8-a0aa-935950c34b73/vocals.wav
+2025-03-06 16:14:21,398 - DEBUG - Found and copied track: no_vocals from temp/separated/htdemucs/737389b2-2979-4635-975e-6b5355568f16/no_vocals.wav to temp/separated/43e76be2-804a-40c8-a0aa-935950c34b73/no_vocals.wav
+2025-03-06 16:14:21,399 - DEBUG - Found wav files in temp/separated/htdemucs/43e76be2-804a-40c8-a0aa-935950c34b73: ['temp/separated/htdemucs/43e76be2-804a-40c8-a0aa-935950c34b73/drums.wav', 'temp/separated/htdemucs/43e76be2-804a-40c8-a0aa-935950c34b73/vocals.wav', 'temp/separated/htdemucs/43e76be2-804a-40c8-a0aa-935950c34b73/other.wav', 'temp/separated/htdemucs/43e76be2-804a-40c8-a0aa-935950c34b73/bass.wav']
+2025-03-06 16:14:21,568 - DEBUG - Found and copied track: drums from temp/separated/htdemucs/43e76be2-804a-40c8-a0aa-935950c34b73/drums.wav to temp/separated/43e76be2-804a-40c8-a0aa-935950c34b73/drums.wav
+2025-03-06 16:14:21,758 - DEBUG - Found and copied track: vocals from temp/separated/htdemucs/43e76be2-804a-40c8-a0aa-935950c34b73/vocals.wav to temp/separated/43e76be2-804a-40c8-a0aa-935950c34b73/vocals.wav
+2025-03-06 16:14:21,919 - DEBUG - Found and copied track: other from temp/separated/htdemucs/43e76be2-804a-40c8-a0aa-935950c34b73/other.wav to temp/separated/43e76be2-804a-40c8-a0aa-935950c34b73/other.wav
+2025-03-06 16:14:22,061 - DEBUG - Found and copied track: bass from temp/separated/htdemucs/43e76be2-804a-40c8-a0aa-935950c34b73/bass.wav to temp/separated/43e76be2-804a-40c8-a0aa-935950c34b73/bass.wav
+2025-03-06 16:14:22,061 - INFO - All tracks saved successfully: {'vocals': '/audio/43e76be2-804a-40c8-a0aa-935950c34b73/vocals.wav', 'no_vocals': '/audio/43e76be2-804a-40c8-a0aa-935950c34b73/no_vocals.wav', 'drums': '/audio/43e76be2-804a-40c8-a0aa-935950c34b73/drums.wav', 'other': '/audio/43e76be2-804a-40c8-a0aa-935950c34b73/other.wav', 'bass': '/audio/43e76be2-804a-40c8-a0aa-935950c34b73/bass.wav'}
+2025-03-06 16:14:22,063 - DEBUG - Cleaned up input file: temp/uploads/43e76be2-804a-40c8-a0aa-935950c34b73.wav
