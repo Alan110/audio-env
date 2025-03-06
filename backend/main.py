@@ -29,7 +29,7 @@ app = FastAPI()
 # CORS设置
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=["*"],  # 允许所有来源
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -102,6 +102,7 @@ async def separate_audio(audio: UploadFile = File(...)):
                 "python", "-m", "demucs.separate", 
                 "-n", "htdemucs", 
                 "-o", os.path.dirname(output_path),
+                "-j", "4",
                 input_path
             ]
             logger.debug(f"Running command: {' '.join(cmd)}")
@@ -118,6 +119,11 @@ async def separate_audio(audio: UploadFile = File(...)):
                 logger.warning(f"Command stderr: {process.stderr}")
             
             logger.info("Audio separation completed successfully")
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Command '{e.cmd}' returned non-zero exit status {e.returncode}.")
+            logger.error(f"Output: {e.output}")
+            logger.error(f"Error: {e.stderr}")
+            raise HTTPException(status_code=500, detail="音轨分离失败")
         except Exception as e:
             logger.error(f"Error during audio separation: {str(e)}")
             raise HTTPException(status_code=500, detail="音轨分离失败")
