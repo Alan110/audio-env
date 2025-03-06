@@ -53,6 +53,26 @@ except Exception as e:
     logger.error(f"Error loading model: {str(e)}")
     raise
 
+def process_audio_tensor(audio):
+    """处理音频张量，确保格式正确"""
+    if not torch.is_tensor(audio):
+        return audio
+    
+    audio = audio.cpu()
+    # 记录原始形状
+    logger.debug(f"Original audio tensor shape: {audio.shape}")
+    
+    # 如果是3D张量 [segments, channels, samples]，转换为2D [channels, samples]
+    if audio.ndim == 3:
+        # 如果第一维是4（可能是4个音轨段），我们需要平均它们
+        if audio.shape[0] == 4:
+            audio = audio.mean(dim=0)
+        else:
+            audio = audio.squeeze(0)
+    
+    logger.debug(f"Processed audio tensor shape: {audio.shape}")
+    return audio
+
 @app.post("/separate")
 async def separate_audio(audio: UploadFile = File(...)):
     logger.info(f"Received audio file: {audio.filename}")
@@ -96,20 +116,15 @@ async def separate_audio(audio: UploadFile = File(...)):
         for source, audio in zip(model.sources, sources):
             out_path = os.path.join(output_path, f"{source}.wav")
             try:
-                # 确保音频数据格式正确
-                if torch.is_tensor(audio):
-                    audio = audio.cpu()
-                    # 处理维度问题 (batch, channels, samples) -> (channels, samples)
-                    if audio.ndim == 3:
-                        audio = audio.squeeze(0)  # 移除 batch 维度
-                    logger.debug(f"Audio tensor shape before saving: {audio.shape}")
+                # 处理音频数据
+                processed_audio = process_audio_tensor(audio)
                 
                 # 保存音频文件
-                torchaudio.save(out_path, audio, model.samplerate)
+                torchaudio.save(out_path, processed_audio, model.samplerate)
                 track_paths[source] = f"/audio/{file_id}/{source}.wav"
                 logger.debug(f"Saved track {source} to {out_path}")
             except Exception as e:
-                logger.error(f"Error saving track {source}: {str(e)}, audio shape: {audio.shape if torch.is_tensor(audio) else 'not a tensor'}")
+                logger.error(f"Error saving track {source}: {str(e)}, audio shape: {processed_audio.shape if torch.is_tensor(processed_audio) else 'not a tensor'}")
                 raise HTTPException(status_code=500, detail=f"保存音轨 {source} 失败")
         
         logger.info(f"All tracks saved successfully: {track_paths}")
