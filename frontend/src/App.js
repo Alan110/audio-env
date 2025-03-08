@@ -1,6 +1,6 @@
 import React from 'react';
 import AudioPlayer from './components/AudioPlayer';
-import './styles/AudioPlayer.css';
+import './styles/tailwind.css';
 
 function App() {
   return (
@@ -11,4 +11,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
