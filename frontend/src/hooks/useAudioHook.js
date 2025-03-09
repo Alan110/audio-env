@@ -2,18 +2,22 @@ import { useState, useRef, useEffect } from 'react';
 
 export const useAudioHook = () => {
   const [tracks, setTracks] = useState({
-    vocals: { volume: 1, muted: false, url: null },
-    drums: { volume: 1, muted: false, url: null },
-    bass: { volume: 1, muted: false, url: null },
-    guitar: { volume: 1, muted: false, url: null },
-    other: { volume: 1, muted: false, url: null }
+    vocals: { volume: 1, muted: false, lastVolume: 1, url: null },
+    drums: { volume: 1, muted: false, lastVolume: 1, url: null },
+    bass: { volume: 1, muted: false, lastVolume: 1, url: null },
+    guitar: { volume: 1, muted: false, lastVolume: 1, url: null },
+    other: { volume: 1, muted: false, lastVolume: 1, url: null }
   });
   
   const [playbackRate, setPlaybackRate] = useState(1);
+  const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [progress, setProgress] = useState(0);
+  const [isSettingTime, setIsSettingTime] = useState(false);
+  const wasPlayingRef = useRef(false);
 
   const audioRefs = {
     vocals: useRef(null),
@@ -23,122 +27,90 @@ export const useAudioHook = () => {
     other: useRef(null)
   };
 
-  // 音频加载和同步
+  // 音频URL变化时加载音频
   useEffect(() => {
     Object.entries(tracks).forEach(([trackName, trackData]) => {
-      if (trackData.url && audioRefs[trackName].current) {
-        audioRefs[trackName].current.src = trackData.url;
-        audioRefs[trackName].current.load();
+      const audio = audioRefs[trackName].current;
+      if (audio && trackData.url) {
+        const fullUrl = `http://localhost:8000${trackData.url}`;
+        if (audio.src !== fullUrl) {
+          audio.src = fullUrl;
+          audio.load();
+        }
+        // 同步音频状态
+        audio.volume = trackData.volume;
+        audio.muted = trackData.muted;
+        audio.playbackRate = playbackRate;
       }
     });
   }, [tracks]);
 
-  // 音频同步播放控制
+  // 音频事件监听
   useEffect(() => {
     const audioElements = Object.values(audioRefs).map(ref => ref.current);
-    let isSettingTime = false;
-
-    const syncTime = (sourceTime) => {
-      if (isSettingTime) return;
-      isSettingTime = true;
-      audioElements.forEach(audio => {
-        if (audio && Math.abs(audio.currentTime - sourceTime) > 0.1) {
-          audio.currentTime = sourceTime;
-        }
-      });
-      isSettingTime = false;
-    };
+    if (!audioElements.length) return;
 
     const handleTimeUpdate = (event) => {
-      if (!isPlaying) return;
-      syncTime(event.target.currentTime);
+      if (!isSettingTime) {
+        const newTime = event.target.currentTime;
+        setCurrentTime(newTime);
+        setDuration(event.target.duration);
+      }
     };
 
-    const handlePlay = (event) => {
-      const currentTime = event.target.currentTime;
-      audioElements.forEach(audio => {
-        if (audio && audio !== event.target) {
-          audio.currentTime = currentTime;
-          audio.play().catch(() => {
-            // 处理自动播放策略限制
-            audio.muted = true;
-            audio.play().then(() => {
-              audio.muted = false;
-            });
-          });
-        }
-      });
-      setIsPlaying(true);
+    const handleLoadedMetadata = (event) => {
+      setDuration(event.target.duration);
     };
 
-    const handlePause = (event) => {
-      audioElements.forEach(audio => {
-        if (audio && audio !== event.target) {
-          audio.pause();
-        }
-      });
-      setIsPlaying(false);
-    };
-
-    // 添加事件监听
     audioElements.forEach(audio => {
       if (audio) {
         audio.addEventListener('timeupdate', handleTimeUpdate);
-        audio.addEventListener('play', handlePlay);
-        audio.addEventListener('pause', handlePause);
+        audio.addEventListener('loadedmetadata', handleLoadedMetadata);
       }
     });
 
-    // 清理事件监听
     return () => {
       audioElements.forEach(audio => {
         if (audio) {
           audio.removeEventListener('timeupdate', handleTimeUpdate);
-          audio.removeEventListener('play', handlePlay);
-          audio.removeEventListener('pause', handlePause);
+          audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
         }
       });
     };
-  }, [isPlaying, audioRefs]);
+  }, [isSettingTime]);
+
+  const syncAudioTimes = (time) => {
+    Object.values(audioRefs).forEach(ref => {
+      const audio = ref.current;
+      if (audio && !audio.muted && Math.abs(audio.currentTime - time) > 0.1) {
+        audio.currentTime = time;
+      }
+    });
+  };
 
   const togglePlay = async () => {
-    const audioElements = Object.values(audioRefs).map(ref => ref.current);
-    
     try {
+      const audioElements = Object.values(audioRefs).map(ref => ref.current);
+      
       if (isPlaying) {
-        audioElements.forEach(audio => audio?.pause());
+        audioElements.forEach(audio => {
+          if (audio && !audio.muted) {
+            audio.pause();
+          }
+        });
       } else {
-        // 确保所有音轨都已加载
-        const loadPromises = audioElements.map(audio => {
-          if (audio && audio.src) {
-            return new Promise((resolve) => {
-              if (audio.readyState >= 2) {
-                resolve();
-              } else {
-                audio.addEventListener('canplay', resolve, { once: true });
+        // 播放所有非静音的音轨
+        await Promise.all(
+          audioElements.map(async (audio) => {
+            if (audio && audio.src && !audio.muted) {
+              try {
+                await audio.play();
+              } catch (err) {
+                console.error('播放错误:', err);
               }
-            });
-          }
-          return Promise.resolve();
-        });
-
-        await Promise.all(loadPromises);
-        
-        // 处理自动播放策略
-        const playPromises = audioElements.map(async (audio) => {
-          if (audio && audio.src) {
-            try {
-              await audio.play();
-            } catch (err) {
-              // 如果直接播放失败，尝试静音播放然后取消静音
-              audio.muted = true;
-              await audio.play();
-              audio.muted = false;
             }
-          }
-        });
-
-        await Promise.all(playPromises);
+          })
+        );
       }
       setIsPlaying(!isPlaying);
     } catch (err) {
@@ -147,13 +119,92 @@ export const useAudioHook = () => {
     }
   };
 
+  const toggleMute = (track) => {
+    const audioElement = audioRefs[track].current;
+    if (!audioElement) return;
+
+    setTracks(prev => {
+      const trackData = prev[track];
+      const newMuted = !trackData.muted;
+      
+      // 直接设置audio元素的muted属性
+      audioElement.muted = newMuted;
+      
+      // 如果取消静音，同步到当前播放位置
+      if (!newMuted) {
+        const currentPos = currentTime;
+        audioElement.currentTime = currentPos;
+        
+        // 如果当前正在播放，则开始播放这个音轨
+        if (isPlaying) {
+          audioElement.play().catch(console.error);
+        }
+      }
+
+      return {
+        ...prev,
+        [track]: {
+          ...trackData,
+          muted: newMuted
+        }
+      };
+    });
+  };
+
   const handleVolumeChange = (track, value) => {
+    const audioElement = audioRefs[track].current;
+    if (audioElement) {
+      audioElement.volume = value;
+    }
+
     setTracks(prev => ({
       ...prev,
-      [track]: { ...prev[track], volume: value, muted: value === 0 }
+      [track]: {
+        ...prev[track],
+        volume: value,
+        lastVolume: value > 0 ? value : prev[track].lastVolume
+      }
     }));
-    if (audioRefs[track].current) {
-      audioRefs[track].current.volume = value;
+  };
+
+  const handleSeek = (time) => {
+    if (isSettingTime) return;
+    
+    setIsSettingTime(true);
+    try {
+      // 保存当前播放状态
+      wasPlayingRef.current = isPlaying;
+      
+      // 如果正在播放，暂时暂停所有音轨
+      if (isPlaying) {
+        Object.values(audioRefs).forEach(ref => {
+          const audio = ref.current;
+          if (audio && !audio.muted) {
+            audio.pause();
+          }
+        });
+      }
+
+      // 设置新的播放位置
+      Object.values(audioRefs).forEach(ref => {
+        const audio = ref.current;
+        if (audio && !audio.muted) {
+          audio.currentTime = time;
+        }
+      });
+      setCurrentTime(time);
+
+      // 如果之前在播放，恢复播放
+      if (wasPlayingRef.current) {
+        Object.values(audioRefs).forEach(ref => {
+          const audio = ref.current;
+          if (audio && !audio.muted) {
+            audio.play().catch(console.error);
+          }
+        });
+      }
+    } finally {
+      setIsSettingTime(false);
     }
   };
 
@@ -170,7 +221,7 @@ export const useAudioHook = () => {
     setTracks(prev => {
       const updatedTracks = { ...prev };
       Object.entries(newTracks).forEach(([key, url]) => {
-        updatedTracks[key] = { ...prev[key], url: `http://localhost:8000${url}` };
+        updatedTracks[key] = { ...prev[key], url };
       });
       return updatedTracks;
     });
@@ -183,6 +234,8 @@ export const useAudioHook = () => {
     isLoading,
     error,
     progress,
+    currentTime,
+    duration,
     audioRefs,
     setIsLoading,
     setError,
@@ -190,6 +243,8 @@ export const useAudioHook = () => {
     togglePlay,
     handleVolumeChange,
     handleSpeedChange,
-    updateTracks
+    updateTracks,
+    toggleMute,
+    handleSeek
   };
 };

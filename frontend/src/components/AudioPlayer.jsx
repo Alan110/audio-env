@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useAudioHook } from '../hooks/useAudioHook';
 import { uploadFile } from '../utils/fileUploader';
 
@@ -17,7 +17,11 @@ const AudioPlayer = () => {
     togglePlay,
     handleVolumeChange,
     handleSpeedChange,
-    updateTracks
+    updateTracks,
+    toggleMute,
+    handleSeek,
+    currentTime,
+    duration
   } = useAudioHook();
 
   const handleFileUpload = async (event) => {
@@ -68,6 +72,21 @@ const AudioPlayer = () => {
       )}
 
       <div className="flex flex-col w-full mt-4">
+        {/* 进度条 */}
+        <div className="w-full bg-white p-4 rounded-lg shadow mb-4">
+          <input
+            type="range"
+            min="0"
+            max={duration || 0}
+            value={currentTime || 0}
+            onChange={(e) => handleSeek(parseFloat(e.target.value))}
+            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+          />
+          <div className="flex justify-between text-sm text-gray-600 mt-1">
+            <span>{formatTime(currentTime)}</span>
+            <span>{formatTime(duration)}</span>
+          </div>
+        </div>
         <div className="flex justify-between items-center bg-white p-4 rounded-lg shadow mb-4">
           <button 
             onClick={togglePlay} 
@@ -115,7 +134,7 @@ const AudioPlayer = () => {
                   />
                 </div>
                 <button 
-                  onClick={() => handleVolumeChange(trackName, trackData.muted ? 1 : 0)}
+                  onClick={() => toggleMute(trackName)}
                   className={`px-4 py-2 rounded-md ${
                     trackData.muted ? 'bg-red-500 hover:bg-red-600' : 'bg-gray-300 hover:bg-gray-400'
                   } text-white min-w-[80px]`}
@@ -130,6 +149,14 @@ const AudioPlayer = () => {
       </div>
     </div>
   );
+};
+
+// 格式化时间为 mm:ss 格式
+const formatTime = (time) => {
+  if (!time) return '00:00';
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 };
 
 export default AudioPlayer;
