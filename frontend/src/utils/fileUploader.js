@@ -1,10 +1,11 @@
-export const uploadFile = async (file, onProgress, onError) => {
+export const uploadFile = async (file, onProgress, onError, cacheMode = true) => {
   if (!file) {
     throw new Error('未选择文件');
   }
 
   const formData = new FormData();
   formData.append('audio', file);
+  formData.append('cache_enabled', cacheMode);
 
   try {
     const xhr = new XMLHttpRequest();

@@ -11,6 +11,8 @@ from demucs.audio import AudioFile
 import torch
 import torchaudio
 import numpy as np
+import librosa
+import soundfile as sf
 import logging
 from datetime import datetime
 
@@ -48,12 +50,61 @@ logger.info(f"Audio directory: {os.path.abspath(AUDIO_DIR)}")
 
 # 加载模型
 try:
+    # 加载demucs模型
     model = pretrained.get_model('htdemucs')
     model.cuda() if torch.cuda.is_available() else model.cpu()
-    logger.info(f"Model loaded successfully. Using device: {'cuda' if torch.cuda.is_available() else 'cpu'}")
+    logger.info(f"Demucs model loaded successfully. Using device: {'cuda' if torch.cuda.is_available() else 'cpu'}")
+    
+    logger.info("Model loaded successfully")
 except Exception as e:
     logger.error(f"Error loading model: {str(e)}")
     raise
+
+def extract_guitar_track(input_path, output_path):
+    """使用librosa提取吉他音轨（简化版本）
+    
+    参数:
+        input_path: 输入音频文件路径
+        output_path: 输出目录路径
+    
+    返回:
+        guitar_path: 处理后的吉他音轨文件路径
+    """
+    try:
+        # 加载音频文件
+        logger.info(f"Loading audio file: {input_path}")
+        y, sr = librosa.load(input_path, sr=None)
+        
+        # 提取谐波部分
+        y_harmonic = librosa.effects.harmonic(y)
+        
+        # 应用带通滤波器，保留吉他主要频率范围(80Hz-1200Hz)
+        y_filtered = librosa.effects.preemphasis(y_harmonic)
+        
+        # 使用STFT进行时频分析
+        D = librosa.stft(y_filtered)
+        S = np.abs(D)
+        
+        # 创建频率掩码，重点保留吉他频率范围
+        freqs = librosa.fft_frequencies(sr=sr)
+        mask = np.logical_and(freqs >= 80, freqs <= 1200)[:, np.newaxis]
+        
+        # 应用掩码并重建信号
+        y_guitar = librosa.istft(D * mask)
+        
+        # 标准化音量
+        y_guitar = librosa.util.normalize(y_guitar)
+        
+        # 保存吉他音轨
+        guitar_path = os.path.join(output_path, 'guitar.wav')
+        sf.write(guitar_path, y_guitar, sr)
+        
+        logger.info(f"Guitar track extracted and saved to: {guitar_path}")
+        return guitar_path
+        
+    except Exception as e:
+        logger.error(f"Error extracting guitar track: {str(e)}")
+        return None
 
 def process_audio_tensor(audio):
     """处理音频张量，确保格式正确"""
@@ -142,7 +193,12 @@ async def separate_audio(audio: UploadFile = File(...), cache_enabled: bool = Fo
             if process.stderr:
                 logger.warning(f"Command stderr: {process.stderr}")
             
-            logger.info("Audio separation completed successfully")
+            logger.info("Demucs separation completed successfully")
+            
+            # 使用librosa处理提取吉他音轨
+            guitar_path = extract_guitar_track(input_path, output_path)
+            if guitar_path:
+                logger.info(f"Guitar track extracted successfully: {guitar_path}")
         except subprocess.CalledProcessError as e:
             logger.error(f"Command '{e.cmd}' returned non-zero exit status {e.returncode}.")
             logger.error(f"Output: {e.output}")

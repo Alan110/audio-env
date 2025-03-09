@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 
 export const useAudioHook = () => {
+  const [cacheMode, setCacheMode] = useState(true);
   const [tracks, setTracks] = useState({
     vocals: { volume: 1, muted: false, lastVolume: 1, url: null },
     drums: { volume: 1, muted: false, lastVolume: 1, url: null },
@@ -237,6 +238,8 @@ export const useAudioHook = () => {
     currentTime,
     duration,
     audioRefs,
+    cacheMode,
+    setCacheMode,
     setIsLoading,
     setError,
     setProgress,
