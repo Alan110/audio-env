@@ -1,0 +1,42 @@
+# 后端
+src/backend/venv/
+src/backend/__pycache__/
+src/backend/temp/
+temp/
+__pycache__/
+src/backend/*.pyc
+src/backend/*.cpython-*.pyc
+src/backend/uploads/
+src/backend/separated/
+src/backend/.env
+src/backend/logs/
+src/backend/app.log
+src/backend/.DS_Store
+
+# 前端
+frontend/**/*.jsx.map
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+.env.local
+.env.*.local
+
+# 其他
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.pid
+*.seed
+*.pid.lock
+**/*.bak
+**/*.tmp
+**/.pytest_cache/
+**/.coverage 
